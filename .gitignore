@@ -3,6 +3,13 @@
 ##
 ## Get latest from https://github.com/github/gitignore/blob/master/VisualStudio.gitignore
 
+# ignore secret configs (passwords and such)
+*secret*.config
+*secret*.resx
+*secret*.Designer.cs
+*.cscfg
+
+
 # User-specific files
 *.rsuser
 *.suo
@@ -26,10 +33,12 @@ x86/
 [Aa][Rr][Mm]/
 [Aa][Rr][Mm]64/
 bld/
+build/
 [Bb]in/
 [Oo]bj/
 [Ll]og/
 [Ll]ogs/
+[Ss]hip/
 
 # Visual Studio 2015/2017 cache/options directory
 .vs/
@@ -65,9 +74,12 @@ artifacts/
 StyleCopReport.xml
 
 # Files built by Visual Studio
+**/Properties/launchSettings.json
+
 *_i.c
 *_p.c
 *_h.h
+*_i.h
 *.ilk
 *.meta
 *.obj
@@ -176,6 +188,7 @@ publish/
 # but database connection strings (with potential passwords) will be unencrypted
 *.pubxml
 *.publishproj
+*.pubxml.user
 
 # Microsoft Azure Web App publish settings. Comment the next line if you want to
 # checkin your Azure Web App publish settings, but sensitive information contained
@@ -236,7 +249,8 @@ orleans.codegen.cs
 
 # Since there are multiple workflows, uncomment next line to ignore bower_components
 # (https://github.com/github/gitignore/pull/1529#issuecomment-104372622)
-#bower_components/
+bower_components/
+node_modules/
 
 # RIA/Silverlight projects
 Generated_Code/
@@ -246,6 +260,7 @@ Generated_Code/
 # because we have git ;-)
 _UpgradeReport_Files/
 Backup*/
+Bak/
 UpgradeLog*.XML
 UpgradeLog*.htm
 ServiceFabricBackup/
@@ -274,6 +289,9 @@ FakesAssemblies/
 # Node.js Tools for Visual Studio
 .ntvs_analysis.dat
 node_modules/
+
+# Typescript v1 declaration files
+typings/
 
 # Visual Studio 6 build log
 *.plg
